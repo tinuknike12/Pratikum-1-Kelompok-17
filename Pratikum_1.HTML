@@ -1,0 +1,350 @@
+<!<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kelompok 17 - Desain UI/UX Pem Web</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #87CEEB ;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background: linear-gradient(135deg, #0d47a1, #1976d2, #42a5f5);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 17px;
+            opacity: 0.95;
+        }
+
+        /* ===== MAIN ===== */
+        main {
+            width: 90%;
+            max-width: 1100px;
+            margin: 35px auto;
+        }
+
+        /* ===== INTRO ===== */
+        .intro {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            border-left: 6px solid #87CEEB ;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .intro h2 {
+            color: #87CEEB ;
+            margin-bottom: 10px;
+            font-size: 26px;
+        }
+
+        .intro p {
+            color: #546e7a;
+            font-size: 16px;
+        }
+
+        /* ===== JUDUL ===== */
+        .judul-anggota {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .judul-anggota h2 {
+            color: #0d47a1;
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        .judul-anggota p {
+            color: #78909c;
+        }
+
+        /* ===== CONTAINER ANGGOTA ===== */
+        .anggota-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        /* ===== CARD ANGGOTA ===== */
+        .anggota {
+            background: white;
+            border-radius: 18px;
+            padding: 25px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border: 1px solid #e3edf7;
+            box-shadow: 0 5px 18px rgba(13, 71, 161, 0.08);
+            transition: 0.3s ease;
+        }
+
+        .anggota:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 25px rgba(13, 71, 161, 0.18);
+            border-color: #90caf9;
+        }
+
+        /* ===== FOTO ===== */
+        .foto {
+            width: 125px;
+            height: 125px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #e3f2fd;
+            flex-shrink: 0;
+            background-color: #e0e0e0;
+        }
+
+        /* ===== BIODATA ===== */
+        .biodata {
+            flex: 1;
+        }
+
+        .biodata h3 {
+            color: #0d47a1;
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .biodata p {
+            color: #455a64;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .biodata strong {
+            display: inline-block;
+            width: 75px;
+            color: #1976d2;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            margin-top: 50px;
+            padding: 25px;
+            background: #0d47a1;
+            color: white;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 800px) {
+            .anggota-container {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 34px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            main {
+                width: 92%;
+            }
+
+            .anggota {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .foto {
+                width: 140px;
+                height: 140px;
+            }
+
+            .biodata strong {
+                width: auto;
+            }
+
+            .biodata p {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Kelompok 17</h1>
+        <p>Desain UI/UX Pemrograman Web</p>
+    </header>
+
+
+    <main>
+
+        <!-- INTRO -->
+        <section class="intro">
+            <h2>Halo!</h2>
+            <p>
+                Selamat datang di halaman biodata anggota
+                <b>Kelompok 17</b> pada mata kuliah
+                <b>Desain UI/UX Pemrograman Web</b>.
+            </p>
+        </section>
+
+
+        <!-- JUDUL ANGGOTA -->
+        <section class="judul-anggota">
+            <h2>Anggota Kelompok</h2>
+            <p>Mahasiswi dan mahasiswa Teknik Informatika - TI-02</p>
+        </section>
+
+
+        <!-- DATA ANGGOTA -->
+        <section class="anggota-container">
+
+            <!-- ANGGOTA 1 -->
+            <article class="anggota">
+                <img src="Wahyu.jpeg"
+                     alt="Foto Syamindera Wahyu Dharmawan"
+                     class="foto">
+
+                <div class="biodata">
+                    <h3>Syamindera Wahyu Dharmawan</h3>
+
+                    <p>
+                        <strong>NIM:</strong> 0110226088<br>
+                        <strong>Jurusan:</strong> Teknik Informatika<br>
+                        <strong>Kelas:</strong> TI-02
+                    </p>
+                </div>
+            </article>
+
+
+            <!-- ANGGOTA 2 -->
+            <article class="anggota">
+                <img src="Tinuk.jpeg"
+                     alt="Foto Tinuk Nike Widi Asmoro"
+                     class="foto">
+
+                <div class="biodata">
+                    <h3>Tinuk Nike Widi Asmoro</h3>
+
+                    <p>
+                        <strong>NIM:</strong> 0110226031<br>
+                        <strong>Jurusan:</strong> Teknik Informatika<br>
+                        <strong>Kelas:</strong> TI-02
+                    </p>
+                </div>
+            </article>
+
+
+            <!-- ANGGOTA 3 -->
+            <article class="anggota">
+                <img src="Wafa.jpeg"
+                     alt="Foto Wafa Aulia Lubis"
+                     class="foto">
+
+                <div class="biodata">
+                    <h3>Wafa Aulia Lubis</h3>
+
+                    <p>
+                        <strong>NIM:</strong> 0110226056<br>
+                        <strong>Jurusan:</strong> Teknik Informatika<br>
+                        <strong>Kelas:</strong> TI-02
+                    </p>
+                </div>
+            </article>
+
+
+            <!-- ANGGOTA 4 -->
+            <article class="anggota">
+                <img src="Zaskia.jpeg"
+                     alt="Foto Zaskia Rasya Amaliah"
+                     class="foto">
+
+                <div class="biodata">
+                    <h3>Zaskia Rasya Amaliah</h3>
+
+                    <p>
+                        <strong>NIM:</strong> 0110226108<br>
+                        <strong>Jurusan:</strong> Teknik Informatika<br>
+                        <strong>Kelas:</strong> TI-02
+                    </p>
+                </div>
+            </article>
+
+
+            <!-- ANGGOTA 5 -->
+            <article class="anggota">
+                <img src="Zidane.jpeg"
+                     alt="Foto Zidane Hafizh Ali"
+                     class="foto">
+
+                <div class="biodata">
+                    <h3>Zidane Hafizh Ali</h3>
+
+                    <p>
+                        <strong>NIM:</strong> 011226100<br>
+                        <strong>Jurusan:</strong> Teknik Informatika<br>
+                        <strong>Kelas:</strong> TI-02
+                    </p>
+                </div>
+            </article>
+
+
+            <!-- ANGGOTA 6 -->
+            <article class="anggota">
+                <img src="Zulfa.jpeg"
+                     alt="Foto Zulfaa Jauzaa"
+                     class="foto">
+
+                <div class="biodata">
+                    <h3>Zulfaa Jauzaa</h3>
+
+                    <p>
+                        <strong>NIM:</strong> 0110226057<br>
+                        <strong>Jurusan:</strong> Teknik Informatika<br>
+                        <strong>Kelas:</strong> TI-02
+                    </p>
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            &copy; 2026 Kelompok 17 - Desain UI/UX Pemrograman Web
+        </p>
+    </footer>
+
+</body>
+</html>
